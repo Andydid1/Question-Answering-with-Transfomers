@@ -139,8 +139,8 @@ def train(model, optimizer, tokenizer, train_loader, valid_loader, epochs, devic
 
 if __name__ == "__main__":
     train_input, train_labels, train_raw_labels = load_data_gpt('train_complete.jsonl')
-    test_input, test_labels, test_raw_labels = load_data_gpt('/test_complete.jsonl')
-    val_input, val_labels, val_raw_labels = load_data_gpt('/dev_complete.jsonl')
+    test_input, test_labels, test_raw_labels = load_data_gpt('test_complete.jsonl')
+    val_input, val_labels, val_raw_labels = load_data_gpt('dev_complete.jsonl')
 
     torch.cuda.empty_cache()
     # Load pre-trained GPT-2 model and tokenizer
